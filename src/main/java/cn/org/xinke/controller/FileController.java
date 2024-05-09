@@ -11,9 +11,13 @@ import org.apache.tika.Tika;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.AntPathMatcher;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.HandlerMapping;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.*;
@@ -94,6 +98,56 @@ public class FileController {
         return "index.html";
     }
 
+
+
+
+    public Boolean checkURL(String url){
+        String[] split = url.split("/");
+        long count = Arrays.stream(split).filter(t -> t == null || t.equals("")).count();
+        return count==1;
+//        long countSeparator =url.chars().filter(t->t=='/').count();
+    }
+
+    public Map createURL( String url){
+/*        String path = request.getAttribute(HandlerMapping.PATH_WITHIN_HANDLER_MAPPING_ATTRIBUTE).toString();
+        String path2 = request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE).toString();
+        String args = new AntPathMatcher().extractPathWithinPattern(path2, path);
+        url= url + "/" + args;*/
+        List<String> titles =Arrays.asList("/file/","/sql/","/cmd/","/config/");
+        boolean flag = false;
+        for(String title : titles){
+            if(url!=null&&url.startsWith(title)){
+                flag = true;
+                break;
+            }
+        }
+        if(flag&&checkURL(url)){
+/*            if (fileDir == null) {
+                fileDir = SLASH;
+            }else if(fileDir.startsWith(SLASH)||fileDir.startsWith("\\") &&fileDir.length()>1){
+                fileDir=fileDir.substring(1);
+            }
+            if (!fileDir.endsWith(SLASH)) {
+                fileDir += SLASH;
+            }*/
+            File destDir = new File(fileDir+url);
+            if(!destDir.exists()){
+                boolean mkdirs = destDir.mkdirs();
+                if(!mkdirs) {
+                    log.error("创建目录异常，目录为："+fileDir+url);
+                    return getRS(500,"创建目录异常，目录为："+fileDir+url);
+                }else{
+                    log.info("创建目录成功，目录为："+fileDir+url);
+                    return getRS(200,"创建目录成功，目录为："+fileDir+url);
+                }
+            }
+            return getRS(200,fileDir+url);
+        }else{
+            return getRS(500,"目录格式不正确");
+        }
+
+    }
+
     /**
      * 上传文件
      *
@@ -137,6 +191,7 @@ public class FileController {
                 outFile.getParentFile().mkdirs();
             }
             file.transferTo(outFile);
+            log.info("文件："+outFile.getPath()+"  上传成功");
             Map rs = getRS(200, "上传成功", path );
             //生成缩略图
             if (useSm != null && useSm) {
@@ -420,6 +475,10 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/list")
     public Map list(String dir, String accept, String exts) {
+        Map createRes = createURL(dir);
+        if((Integer)createRes.get("code")!=200){
+            return createRes;
+        }
         String[] mExts = null;
         if (exts != null && !exts.trim().isEmpty()) {
             mExts = exts.split(",");
@@ -523,6 +582,7 @@ public class FileController {
         rs.put( "code", 200 );
         rs.put( "msg", "查询成功" );
         rs.put( "data", dataList );
+//        System.out.println(dataList);
         return rs;
     }
 
@@ -571,6 +631,7 @@ public class FileController {
                         if (smF.exists() && smF.isFile()) {
                             smF.delete();
                         }
+                        log.info("文件:"+f.getPath()+" 删除成功");
                         return getRS(200, "文件删除成功" );
                     }
                 } else {
@@ -579,6 +640,7 @@ public class FileController {
                     if (smF.exists() && smF.isDirectory()) {
                         forDelFile(smF);
                     }
+                    log.info("目录:"+f.getPath()+" 删除成功");
                     return getRS(200, "目录删除成功" );
                 }
             } else {

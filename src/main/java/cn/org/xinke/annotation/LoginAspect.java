@@ -1,3 +1,4 @@
+/*
 package cn.org.xinke.annotation;
 
 import cn.org.xinke.entity.User;
@@ -11,11 +12,13 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /**
  * @description 登录切面
  * @author cinco
  * @date 2019-1-21
- */
+ *//*
+
 @Aspect
 @Component
 public class LoginAspect {
@@ -39,4 +42,4 @@ public class LoginAspect {
             throw throwable;
         }
     }
-}
+}*/
