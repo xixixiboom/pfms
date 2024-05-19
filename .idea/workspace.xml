@@ -84,9 +84,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\programing\mavenRepository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../programing/apache-maven-3.8.4-bin/apache-maven-3.8.4" />
-        <option name="userSettingsFile" value="D:\programing\apache-maven-3.8.4-bin\apache-maven-3.8.4\conf\settings.xml" />
+        <option name="localRepository" value="D:\program\programming\utils\mavenRepository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../program/programming/utils/apache-maven-3.9.2" />
+        <option name="userSettingsFile" value="D:\program\programming\utils\apache-maven-3.9.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -371,7 +371,7 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\60348\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\封权\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -403,6 +403,7 @@
       <workItem from="1551420830367" duration="1675000" />
       <workItem from="1715216570130" duration="2607000" />
       <workItem from="1715219190865" duration="11099000" />
+      <workItem from="1716006483132" duration="5713000" />
     </task>
     <task id="LOCAL-00001" summary="更换系统logo">
       <created>1548470821316</created>

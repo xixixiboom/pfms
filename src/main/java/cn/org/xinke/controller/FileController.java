@@ -103,11 +103,11 @@ public class FileController {
 
     public Boolean checkURL(String url){
         String[] split = url.split("/");
-        long count = Arrays.stream(split).filter(t -> t == null || t.equals("")).count();
+        long count = Arrays.stream(split).filter(t -> t == null || "".equals(t)).count();
         return count==1;
 //        long countSeparator =url.chars().filter(t->t=='/').count();
     }
-
+// todo 创建目录成功，目录为：D:\home\program\ftp//file/20240518/OVERSEAS_WAREHOUSE   多一个斜杠，多级目录创建无法刷新页面
     public Map createURL( String url){
 /*        String path = request.getAttribute(HandlerMapping.PATH_WITHIN_HANDLER_MAPPING_ATTRIBUTE).toString();
         String path2 = request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE).toString();
@@ -116,7 +116,7 @@ public class FileController {
         List<String> titles =Arrays.asList("/file/","/sql/","/cmd/","/config/");
         boolean flag = false;
         for(String title : titles){
-            if(url!=null&&url.startsWith(title)){
+            if(url!=null&&url.startsWith(title)||(url+SLASH).equals(title)){
                 flag = true;
                 break;
             }
