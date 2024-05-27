@@ -144,7 +144,7 @@
         if(typeof dir =="undefined"){
             renderList();
         }else{
-            let dirReplace = dir.replaceAll('%2F','/');
+            let dirReplace = dir.replace(/%2F/gm,'/');
             renderList(dirReplace);
         }
 

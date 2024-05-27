@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../user-micro-service/src/main/java/cn/org/xinke/entity/User.java" afterDir="false" />
-    </list>
-    <list id="1ad0260d-93dd-490a-bd19-a67c1a7523ed" name="nocommit" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/fileChoose.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/fileChoose.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/share.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/share.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -84,9 +80,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\program\programming\utils\mavenRepository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../program/programming/utils/apache-maven-3.9.2" />
-        <option name="userSettingsFile" value="D:\program\programming\utils\apache-maven-3.9.2\conf\settings.xml" />
+        <option name="localRepository" value="D:\programing\mavenRepository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../programing/apache-maven-3.8.4-bin/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="D:\programing\apache-maven-3.8.4-bin\apache-maven-3.8.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -206,24 +202,26 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3b7d026482c3baf3d24bab884e1ebe46&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/javanote/gitprogram/deploy_utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "3b7d026482c3baf3d24bab884e1ebe46",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.org.xinke.constant" />
@@ -377,7 +375,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="" />
-      <changelist id="1ad0260d-93dd-490a-bd19-a67c1a7523ed" name="nocommit" comment="" />
       <created>1548036154855</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -404,6 +401,8 @@
       <workItem from="1715216570130" duration="2607000" />
       <workItem from="1715219190865" duration="11099000" />
       <workItem from="1716006483132" duration="5713000" />
+      <workItem from="1716272013509" duration="1386000" />
+      <workItem from="1716518631718" duration="8080000" />
     </task>
     <task id="LOCAL-00001" summary="更换系统logo">
       <created>1548470821316</created>
