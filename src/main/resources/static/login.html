@@ -35,6 +35,7 @@
                     <label class="layui-form-label">密码</label>
                     <div class="layui-input-inline">
                         <input type="password" name="pwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        <input type="hidden" name ="dir" id="dirId">
                     </div>
                 </div>
 
@@ -60,5 +61,15 @@
 <script type="text/javascript" src="assets/layui/layui.js"></script>
 <script type="text/javascript" src="assets/clipboard.min.js"></script>
 <script type="text/javascript" src="assets/config.js"></script>
+<script>
+    layui.use(['jquery', 'layer', 'element', 'upload', 'laytpl', 'util'], function () {
+        var router = layui.router();
+        var dir = router.search.dir;
+        var dirReplace = dir.replace(/%2F/gm,'/');
+
+        // localStorage.setItem('targetPage',dir);
+        document.getElementById("dirId").value = dirReplace;
+    });
+</script>
 </body>
 </html>

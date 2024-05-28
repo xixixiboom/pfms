@@ -1,4 +1,3 @@
-/*
 package cn.org.xinke.annotation;
 
 import cn.org.xinke.entity.User;
@@ -11,13 +10,8 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-*/
-/**
- * @description 登录切面
- * @author cinco
- * @date 2019-1-21
- *//*
 
 @Aspect
 @Component
@@ -31,15 +25,18 @@ public class LoginAspect {
         // 获取请求/响应对象
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+        HttpSession session = request.getSession();
+//        session.setAttribute("targetPage",request.getRequestURI());
         // 登录认证
         User loginUser = (User) request.getSession().getAttribute( "LOGIN_USER" );
         if (loginUser == null) {
             response.sendRedirect( "/login.html" );
         }
         try {
+//            session.
             return pjp.proceed();
         } catch (Throwable throwable) {
             throw throwable;
         }
     }
-}*/
+}

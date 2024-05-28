@@ -17,9 +17,12 @@ public class User {
      */
     private String pwd;
 
-    public User(String uname, String pwd) {
+    private String dir;
+
+    public User(String uname, String pwd,String dir) {
         this.uname = uname;
         this.pwd = pwd;
+        this.dir =dir;
     }
 
     public String getUname() {
@@ -37,4 +40,7 @@ public class User {
     public void setPwd(String pwd) {
         this.pwd = pwd;
     }
+
+    public void setDir(String dir) {this.dir = dir;}
+    public String getDir(){return dir;}
 }

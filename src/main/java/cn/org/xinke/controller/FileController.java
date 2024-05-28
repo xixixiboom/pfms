@@ -34,6 +34,7 @@ import java.util.*;
 @CrossOrigin
 @Controller
 public class FileController {
+    public static String retURL="";
 
     private static final String SLASH = "/";
 
@@ -79,10 +80,12 @@ public class FileController {
      * @return
      */
     @PostMapping("/auth")
-    public String auth(User user, HttpSession session) {
+    public String auth(User user, HttpSession session,HttpServletRequest request) {
+//        String requestURI = request.getRequestURI();
+        String dir = user.getDir();
         if (user.getUname().equals(uname) && user.getPwd().equals(pwd)) {
             session.setAttribute( "LOGIN_USER", user );
-            return "redirect:/";
+            return "redirect:/#/dir="+dir;
         }
         return "redirect:/login";
     }
