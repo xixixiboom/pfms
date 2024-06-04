@@ -85,7 +85,11 @@ public class FileController {
         String dir = user.getDir();
         if (user.getUname().equals(uname) && user.getPwd().equals(pwd)) {
             session.setAttribute( "LOGIN_USER", user );
-            return "redirect:/#/dir="+dir;
+            if (dir.contains("/")) {
+                dir=dir.replaceAll("/","%2F");
+                return "redirect:/#/dir="+dir;
+            }
+            return "redirect:/#/dir=%2Finfo";
         }
         return "redirect:/login";
     }
@@ -116,7 +120,7 @@ public class FileController {
         String path2 = request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE).toString();
         String args = new AntPathMatcher().extractPathWithinPattern(path2, path);
         url= url + "/" + args;*/
-        List<String> titles =Arrays.asList("/file/","/sql/","/cmd/","/config/");
+        List<String> titles =Arrays.asList("/file/","/sql/","/cmd/","/config/","/info/","/tmp/");
         boolean flag = false;
         for(String title : titles){
             if(url!=null&&url.startsWith(title)||(url+SLASH).equals(title)){
