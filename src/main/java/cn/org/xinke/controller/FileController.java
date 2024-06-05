@@ -120,7 +120,7 @@ public class FileController {
         String path2 = request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE).toString();
         String args = new AntPathMatcher().extractPathWithinPattern(path2, path);
         url= url + "/" + args;*/
-        List<String> titles =Arrays.asList("/file/","/sql/","/cmd/","/config/","/info/","/tmp/");
+        List<String> titles =Arrays.asList("/file/","/sql/","/cmd/","/config/","/info/","/tmp/","/version/");
         boolean flag = false;
         for(String title : titles){
             if(url!=null&&url.startsWith(title)||(url+SLASH).equals(title)){
