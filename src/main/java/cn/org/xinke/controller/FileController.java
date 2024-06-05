@@ -109,7 +109,7 @@ public class FileController {
 
 
     public Boolean checkURL(String url){
-        String[] split = url.split("/");
+        String[] split = url.split("/",-1);
         long count = Arrays.stream(split).filter(t -> t == null || "".equals(t)).count();
         return count==1;
 //        long countSeparator =url.chars().filter(t->t=='/').count();
